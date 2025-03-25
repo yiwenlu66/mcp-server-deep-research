@@ -7,6 +7,7 @@ Your personal Research Assistant, turning research questions into comprehensive,
 ## 🚀 Try it Out
 
 [![Watch the demo](https://img.youtube.com/vi/_a7sfo5yxoI/maxresdefault.jpg)]([VIDEO_URL](https://youtu.be/_a7sfo5yxoI))
+Youtube: https://youtu.be/_a7sfo5yxoI
 
 1. **Download Claude Desktop**
    - Get it [here](https://claude.ai/download)
