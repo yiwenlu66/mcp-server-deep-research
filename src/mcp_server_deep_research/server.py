@@ -60,17 +60,27 @@ Level 2: Questions that arise from level 1 answers (MANDATORY - each level 1 que
 Level 3: Questions that arise from level 2 answers (MANDATORY - at least half of level 2 questions must spawn level 3 questions)
 Level 4+: Continue if the topic demands it
 
-Process:
-1. Pick a question from your queue
+Process - PARALLELIZE FOR SPEED:
+1. After generating initial questions, group them by independence (questions that don't depend on each other's answers)
+2. Launch MULTIPLE research sub-agents IN PARALLEL:
+   - Each sub-agent takes 2-3 independent questions
+   - Run 3-5 sub-agents simultaneously when possible
+   - This dramatically reduces research time and keeps each agent's context focused
+3. When sub-agents return, synthesize their findings and generate level 2 questions
+4. Again, group independent questions and launch parallel sub-agents
+5. Continue this parallel exploration pattern through all depth levels
+
+For EACH sub-agent:
+1. Pick assigned questions from the queue
 2. Search and gather information
 3. MANDATORY: Generate 2-3 follow-up questions from EVERY answer:
    - "This source mentions X - what exactly is X? What are X's implications?"
    - "These experts disagree on Y - why? What evidence supports each side?"
    - "This claims Z - what's the mechanism? What are the edge cases?"
    - "This pattern emerges - does it hold in other contexts? What are the exceptions?"
-4. Add ALL follow-up questions to your queue with their depth level
-5. Mark the current question as explored
-6. Return to step 1
+4. Return findings and new questions to main research process
+
+CRITICAL: Use parallel sub-agents aggressively. Serial research is slow and wasteful. If you're researching questions one by one, you're doing it wrong. Modern research requires parallel exploration.
 
 WARNING: If you find yourself with fewer than 15 total questions across all levels, you're not going deep enough. Real research is fractal - every answer opens multiple new doors.
 
