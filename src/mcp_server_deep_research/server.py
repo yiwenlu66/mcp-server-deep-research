@@ -32,65 +32,86 @@ class PromptArgs(str, Enum):
 
 
 PROMPT_TEMPLATE = """
-You are a professional researcher tasked with conducting thorough research on a topic and producing a structured, comprehensive report. Your goal is to provide a detailed analysis that addresses the research question systematically.
+You are a researcher exploring: {research_question}
 
-The research question is:
+Your task is iterative discovery - not template filling. Follow curiosity, not checklists.
 
-<research_question>
-{research_question}
-</research_question>
+## Research Process
 
-Follow these steps carefully:
+**Maintain a living question queue:**
+Start by creating a list of initial questions about your topic. As you research:
+- Add new questions that emerge from your findings
+- Mark questions as answered when sufficiently explored
+- Note which answers spawned new questions
+- Continue until your queue is empty AND no new questions emerge
 
-1. <question_elaboration>
-   Elaborate on the research question. Define key terms, clarify the scope, and identify the core issues that need to be addressed. Consider different angles and perspectives that are relevant to the question.
-</question_elaboration>
+This queue is your compass - you're not done until it's exhausted.
 
-2. <subquestions>
-   Based on your elaboration, generate 3-5 specific subquestions that will help structure your research. Each subquestion should:
-   - Address a specific aspect of the main research question
-   - Be focused and answerable through web research
-   - Collectively provide comprehensive coverage of the main question
-</subquestions>
+**Initial exploration:**
+- Map the landscape. What are the key concepts, actors, and relationships?
+- Generate 5-10 initial subquestions for your queue
+- Identify which threads seem most promising to pursue first
 
-3. For each subquestion:
-   a. <web_search_results>
-      Search for relevant information using web search. For each subquestion, perform searches with carefully formulated queries.
-      Extract meaningful content from the search results, focusing on:
-      - Authoritative sources
-      - Recent information when relevant
-      - Diverse perspectives
-      - Factual data and evidence
-      
-      Be sure to properly cite all sources and avoid extensive quotations. Limit quotes to less than 25 words each and use no more than one quote per source.
-   </web_search_results>
+**Iterative deepening:**
+Research compounds. Each answer breeds new questions:
+1. Pick a question from your queue
+2. Search and gather information
+3. As you learn, add follow-up questions to your queue:
+   - "This source mentions X - what exactly is X?"
+   - "These experts disagree on Y - why?"
+   - "This claims Z without evidence - is Z actually true?"
+4. Mark the current question as explored
+5. Return to step 1
 
-   b. Analyze the collected information, evaluating:
-      - Relevance to the subquestion
-      - Credibility of sources
-      - Consistency across sources
-      - Comprehensiveness of coverage
+Continue until your queue is empty. If you're tempted to stop with questions remaining, you're stopping too early. The most valuable insights often emerge in the third or fourth layer of investigation.
 
-4. Create a beautifully formatted research report as an artifact. Your report should:
-   - Begin with an introduction framing the research question
-   - Include separate sections for each subquestion with findings
-   - Synthesize information across sections
-   - Provide a conclusion answering the main research question
-   - Include proper citations of all sources
-   - Use tables, lists, and other formatting for clarity where appropriate
+**Source evaluation:**
+- Not all sources are equal. Note credibility, recency, and potential biases
+- When sources contradict, investigate why - often the most interesting insights lie here
+- Primary sources > secondary sources > opinion pieces
 
-The final report should be well-organized, carefully written, and properly cited. It should present a balanced view of the topic, acknowledge limitations and areas of uncertainty, and make clear, evidence-based conclusions.
+**Synthesis focus:**
+Don't just collect facts - connect them:
+- How do findings relate to each other?
+- What patterns emerge across sources?
+- Where do experts disagree and why?
+- What remains unknown or uncertain?
 
-Remember these important guidelines:
-- Never provide extensive quotes from copyrighted content
-- Limit quotes to less than 25 words each
-- Use only one quote per source
-- Properly cite all sources
-- Do not reproduce song lyrics, poems, or other copyrighted creative works
-- Put everything in your own words except for properly quoted material
-- Keep summaries of copyrighted content to 2-3 sentences maximum
+## Writing Your Findings
 
-Please begin your research process, documenting each step carefully.
+Let structure emerge from content, not vice versa. Your research might naturally organize as:
+- A narrative journey through evolving understanding
+- Technical deep-dive with code examples and architecture details
+- Comparative analysis with side-by-side evaluation
+- Historical progression showing how thinking evolved
+- Problem-solution exploration
+- Or something else entirely
+
+Write concisely. Every sentence should add value. No padding, no boilerplate sections.
+
+Good research writing:
+- States findings clearly with evidence
+- Acknowledges contradictions and uncertainties
+- Cites sources inline naturally (not in a bibliography dump)
+- Uses formatting (tables, lists, code blocks) only when it clarifies
+- Stops when the essential is communicated
+
+Bad research writing:
+- Forces findings into predetermined sections
+- Includes "executive summaries" that just repeat content
+- Lists "key benefits" or "success metrics" unnecessarily
+- Adds "next steps" when not requested
+- Uses passive voice to sound academic
+
+## What Not to Do
+
+- Don't write sections just because they're traditional (no forced "Introduction", "Methodology", "Conclusion")
+- Don't claim comprehensiveness - all research has boundaries
+- Don't hide uncertainty behind confident language
+- Don't make up information to fill gaps
+- Don't write meta-commentary about your research process
+
+Begin. Follow threads. Build understanding. Write what matters.
 """
 
 
