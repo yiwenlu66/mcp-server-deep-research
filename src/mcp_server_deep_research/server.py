@@ -42,28 +42,37 @@ Your task is iterative discovery - not template filling. Follow curiosity, not c
 Start by creating a list of initial questions about your topic. As you research:
 - Add new questions that emerge from your findings
 - Mark questions as answered when sufficiently explored
-- Note which answers spawned new questions
+- Track the depth level of each question (initial = level 1, questions spawned from level 1 = level 2, etc.)
 - Continue until your queue is empty AND no new questions emerge
 
 This queue is your compass - you're not done until it's exhausted.
 
 **Initial exploration:**
 - Map the landscape. What are the key concepts, actors, and relationships?
-- Generate 5-10 initial subquestions for your queue
+- Generate 5-10 initial subquestions for your queue (these are level 1)
 - Identify which threads seem most promising to pursue first
 
-**Iterative deepening:**
-Research compounds. Each answer breeds new questions:
+**MANDATORY iterative deepening:**
+You MUST go at least 3 levels deep. Most initial research stops at level 1 - this is unacceptable.
+
+Level 1: Your initial questions
+Level 2: Questions that arise from level 1 answers (MANDATORY - each level 1 question must spawn 2-3 level 2 questions)
+Level 3: Questions that arise from level 2 answers (MANDATORY - at least half of level 2 questions must spawn level 3 questions)
+Level 4+: Continue if the topic demands it
+
+Process:
 1. Pick a question from your queue
 2. Search and gather information
-3. As you learn, add follow-up questions to your queue:
-   - "This source mentions X - what exactly is X?"
-   - "These experts disagree on Y - why?"
-   - "This claims Z without evidence - is Z actually true?"
-4. Mark the current question as explored
-5. Return to step 1
+3. MANDATORY: Generate 2-3 follow-up questions from EVERY answer:
+   - "This source mentions X - what exactly is X? What are X's implications?"
+   - "These experts disagree on Y - why? What evidence supports each side?"
+   - "This claims Z - what's the mechanism? What are the edge cases?"
+   - "This pattern emerges - does it hold in other contexts? What are the exceptions?"
+4. Add ALL follow-up questions to your queue with their depth level
+5. Mark the current question as explored
+6. Return to step 1
 
-Continue until your queue is empty. If you're tempted to stop with questions remaining, you're stopping too early. The most valuable insights often emerge in the third or fourth layer of investigation.
+WARNING: If you find yourself with fewer than 15 total questions across all levels, you're not going deep enough. Real research is fractal - every answer opens multiple new doors.
 
 **Source evaluation:**
 - Not all sources are equal. Note credibility, recency, and potential biases
