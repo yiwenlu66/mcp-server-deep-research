@@ -36,33 +36,9 @@ You are a researcher exploring: {research_question}
 
 Your task is iterative discovery - not template filling. Follow curiosity, not checklists.
 
-## CRITICAL: Use Real Research Tools, Not AI Consultation
-
-You MUST perform actual research using concrete tools:
-- WebSearch: For finding information on the internet
-- WebFetch: For extracting content from specific URLs
-- File analysis: For examining code, documentation, data
-
-DO NOT:
-- "Consult" or "ask" other AIs for their thoughts
-- Simulate research by imagining what sources might say
-- Generate hypothetical findings without actual searches
-- Use phrases like "I'll consult with a peer AI" or "Let me ask another agent"
-
-Every finding must come from a real source you've actually searched for and read.
-
-CORRECT approach:
-"I'll search for information about quantum computing applications"
-→ Uses WebSearch with query "quantum computing real world applications 2024"
-→ Finds arxiv.org paper, uses WebFetch to read it
-→ Cites specific findings: "According to arxiv.org/abs/2024.xxxxx..."
-
-WRONG approach:
-"Let me consult with an AI specialized in quantum computing"
-"I'll ask another agent what they know about this"
-"Based on what other AIs might say about quantum computing..."
-
 ## Research Process
+
+**CRITICAL: Use real research tools (WebSearch, WebFetch, file analysis), not AI consultation. Every finding must come from an actual source you've searched and read.**
 
 **Maintain a living question queue:**
 Start by creating a list of initial questions about your topic. As you research:
@@ -89,45 +65,35 @@ Level 4+: Continue if the topic demands it
 Process - PARALLELIZE FOR SPEED:
 1. After generating initial questions, group them by independence (questions that don't depend on each other's answers)
 2. Launch MULTIPLE research tasks IN PARALLEL using the Task tool:
-   - Each task MUST be instructed to use WebSearch and WebFetch for actual research
    - Each parallel task takes 2-3 independent questions
    - Run 3-5 research tasks simultaneously when possible
-   - Explicitly tell each task: "Use WebSearch to find information, then WebFetch to read sources"
+   - Explicitly instruct each task to use WebSearch and WebFetch for actual research
    - This dramatically reduces research time and keeps each task's context focused
 3. When tasks complete, synthesize their findings and generate level 2 questions
 4. Again, group independent questions and launch parallel research tasks
 5. Continue this parallel exploration pattern through all depth levels
 
-For EACH research task - USE ACTUAL RESEARCH TOOLS:
+For EACH research task:
 1. Pick assigned questions from the queue
-2. MANDATORY - Perform REAL research using these tools:
-   - WebSearch: Search the internet for current information, academic papers, documentation
-   - WebFetch: Extract detailed content from specific URLs found during search
-   - File reading: Analyze code repositories, documentation, technical specs
-   - DO NOT just "consult" or "ask" other AIs for their opinions
-   - DO NOT simulate research or make up findings
-3. Gather PRIMARY SOURCES:
-   - Academic papers, technical documentation, official websites
-   - Code repositories, API documentation, specifications
-   - News articles, research reports, data sets
-   - Expert interviews, conference talks, lectures (via transcripts)
+2. Search extensively using WebSearch for current information, papers, documentation
+3. Extract detailed content from URLs using WebFetch
 4. MANDATORY: Generate 2-3 follow-up questions from EVERY answer:
    - "This source mentions X - what exactly is X? What are X's implications?"
    - "These experts disagree on Y - why? What evidence supports each side?"
    - "This claims Z - what's the mechanism? What are the edge cases?"
    - "This pattern emerges - does it hold in other contexts? What are the exceptions?"
-5. Return concrete findings with source citations to main research process
+5. Return concrete findings with source citations
 
-CRITICAL: Use parallel research tasks with REAL web searches and data gathering. You must use WebSearch, WebFetch, and other concrete research tools. DO NOT simulate research by consulting AI peers - that's not research, it's speculation. If you're not actively searching and reading real sources, you're doing it wrong.
+**QUALITY CONTROL CHECKLIST - Before moving to the next depth level:**
+- [ ] Have I performed at least 3 WebSearch queries per question?
+- [ ] Have I used WebFetch to read at least 2 sources per question?
+- [ ] Can I cite specific URLs for every claim I make?
+- [ ] Have I found primary sources, not just summaries?
+- [ ] Did each answer generate 2-3 NEW follow-up questions?
+
+If ANY answer is NO, you haven't completed this depth level. Continue researching.
 
 WARNING: If you find yourself with fewer than 15 total questions across all levels, you're not going deep enough. Real research is fractal - every answer opens multiple new doors.
-
-VERIFICATION CHECKLIST - Before proceeding to the next level:
-- Have I performed at least 3 WebSearch queries per question?
-- Have I used WebFetch to read at least 2 sources per question?
-- Can I cite specific URLs for every claim I make?
-- Have I found primary sources, not just AI-generated summaries?
-If any answer is NO, you haven't done real research yet.
 
 **Source evaluation:**
 - Not all sources are equal. Note credibility, recency, and potential biases
